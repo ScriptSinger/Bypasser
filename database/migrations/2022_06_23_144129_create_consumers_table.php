@@ -14,7 +14,7 @@ class CreateConsumersTable extends Migration
     public function up()
     {
         Schema::create('consumers', function (Blueprint $table) {
-            $table->increments('id')->nullable();
+            $table->increments('id')->unique();
             $table->integer('area_id', false, true);
             $table->string('personal_account')->nullable();
             $table->string('full_name')->nullable();
