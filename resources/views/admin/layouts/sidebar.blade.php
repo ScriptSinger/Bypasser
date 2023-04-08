@@ -147,9 +147,9 @@
                    </li>
                    <li class="nav-header">Информация</li>
                    <li class="nav-item">
-                       <a href="#" class="nav-link">
+                       <a href="{{ route('contacts.index') }}" class="nav-link">
                            <i class="nav-icon far fa-circle text-danger"></i>
-                           <p class="text">Свяжитесь с нами</p>
+                           <p class="text">Контакты</p>
                        </a>
                    </li>
                </ul>

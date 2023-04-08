@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\AreaController;
 use App\Http\Controllers\Admin\ConsumerController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Support\Facades\Auth;
@@ -31,6 +32,7 @@ Route::resource('employees-consumer', EmployeeConsumerController::class)->middle
 
 Route::group(['prefix' => 'admin', 'middleware' => ['role:super-user']], function () {
     Route::get('/', [MainController::class, 'index'])->name('index');
+    Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index');
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('areas', AreaController::class);
