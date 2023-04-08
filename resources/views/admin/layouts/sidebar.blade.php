@@ -146,12 +146,16 @@
                        </ul>
                    </li>
                    <li class="nav-header">Информация</li>
+
                    <li class="nav-item">
                        <a href="{{ route('contacts.index') }}" class="nav-link">
-                           <i class="nav-icon far fa-circle text-danger"></i>
+                           <i class="nav-icon fas fa-id-card"></i>
                            <p class="text">Контакты</p>
                        </a>
                    </li>
+
+
+
                </ul>
            </nav>
            <!-- /.sidebar-menu -->

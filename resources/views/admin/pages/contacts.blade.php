@@ -44,22 +44,16 @@
                         <div class="card-body pt-0">
                             <div class="row">
                                 <div class="col-12">
-
                                     <h2 class="lead"><b>Березин Александр Юрьевич</b></h2>
-                                    <p class="text-muted text-sm"><b></p>
-                                    <p class="text-muted text-sm"></p>
-
                                     <ul class="ml-4 mb-0 fa-ul text-muted">
                                         <li><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> <b>Юр. адрес </b>(индекс), 450039, г. Уфа, ул. Ферина, д. 10, кв. 99</li>
-                                        <li><b>Почтовый адрес </b>(индекс) 450039, г. Уфа, ул. Ферина, д. 10, кв. 99</li>
-                                        <li><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> <b>Телефон </b>(347) 294-14-10, , (347) 294-17-10,</li>
-                                        <li><span class="fa-li"><i class="fas fa-lg fa-envelope"></i></span> <b>E-mail </b>aleksandr653@mail.ru;</li>
+                                        <li><span class="fa-li"><i class="fas fa-lg fa-envelope"></i></span><b>Почтовый адрес </b>(индекс) 450039, г. Уфа, ул. Ферина, д. 10, кв. 99</li>
+                                        <li><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> <b>Телефон </b>(347) 294-14-10, (347) 294-17-10</li>
+                                        <li><span class="fa-li"><i class="fas fa-lg fa-at"></i></span> <b>E-mail </b>aleksandr653@mail.ru</li>
                                         <li><b>ОГРНИП </b>312028015200233</li>
                                         <li><b>ИНН </b> 027319728167</li>
                                     </ul>
-
                                 </div>
-
                             </div>
                         </div>
                         <div class="card-footer">
@@ -67,10 +61,8 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
+        </div>
 </section>
 <!-- /.content -->
 @endsection
