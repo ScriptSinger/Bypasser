@@ -36,7 +36,7 @@ class CreateSuperUserSeeder extends Seeder
         $tester = User::create([
             'name' => 'Тестировщик',
             'email' => 'test@mail.ru',
-            'password' => Hash::make('qrt8B48SjatY'),
+            'password' => Hash::make('frel84hdr33ya'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
