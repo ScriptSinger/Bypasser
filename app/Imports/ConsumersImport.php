@@ -31,10 +31,10 @@ class ConsumersImport implements ToCollection
                 'verif_date' => $row[9],
                 'seal' => $row[10],
                 'year_release' => $row[11],
-                'day_zone' => $row[12],
-                'crawl_date' => $row[13],
-                'reading' => $row[14],
-                'note' => $row[15],
+                // 'day_zone' => $row[12],
+                'crawl_date' => $row[12],
+                'reading' => $row[13],
+                'note' => $row[14],
                 'area_id' => $this->area_id
             ]);
         }

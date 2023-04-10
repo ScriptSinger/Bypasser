@@ -29,7 +29,7 @@ class ConsumersExport implements FromCollection, ShouldAutoSize, WithMapping
             $consumer->verif_date,
             $consumer->seal,
             $consumer->year_release,
-            $consumer->day_zone,
+            // $consumer->day_zone,
             $consumer->crawl_date,
             $consumer->reading,
             $consumer->note,

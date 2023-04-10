@@ -28,7 +28,7 @@ class CreateConsumersTable extends Migration
             $table->string('verif_date')->nullable();
             $table->string('seal')->nullable();
             $table->string('year_release')->nullable();
-            $table->string('day_zone')->nullable();
+            // $table->string('day_zone')->nullable();
             $table->string('crawl_date')->nullable();
             $table->string('reading')->nullable();
             $table->string('note')->nullable();
@@ -45,6 +45,9 @@ class CreateConsumersTable extends Migration
      */
     public function down()
     {
+        Schema::table('consumers', function (Blueprint $table) {
+            $table->dropColumn('day_zone');
+        });
         Schema::dropIfExists('consumers');
     }
 }
