@@ -45,9 +45,9 @@ class CreateConsumersTable extends Migration
      */
     public function down()
     {
-        Schema::table('consumers', function (Blueprint $table) {
-            $table->dropColumn('day_zone');
-        });
+        // Schema::table('consumers', function (Blueprint $table) {
+        //     $table->dropColumn('day_zone');
+        // });
         Schema::dropIfExists('consumers');
     }
 }
