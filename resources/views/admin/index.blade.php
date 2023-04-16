@@ -87,7 +87,7 @@
                                 <h3>{{ $data['consumerCount'] }}</h3>
                             </div>
                             <div class="icon">
-                                <i class="fas fa-plug"></i>
+                                <i class="fas fa-table"></i>
                             </div>
                             <a href="{{ route('consumers.index') }}" class="small-box-footer">Подробнее <i
                                     class="fas fa-arrow-circle-right"></i></a>
