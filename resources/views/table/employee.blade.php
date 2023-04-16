@@ -6,22 +6,50 @@
                     {{-- <th style="width: 30px">#</th> --}}
                     <th>Действие</th>
                     <th data-toggle="tooltip" title="Фотофиксация показаний в альбомном виде">Фото</th>
-                    <th>Примечание</th>
-                    <th data-toggle="tooltip" title="Показания прибора учета на дату обхода">Показания</th>
-                    <th>Дата обхода</th>
-                    <th data-toggle="tooltip" title="Номер лицевого счета">№ счета</th>
-                    <th>ФИО</th>
-                    <th data-toggle="tooltip" title="Населенный пункт">НП</th>
+                    <th>Линк-ПУ</th>
+                    <th data-toggle="tooltip" title="Район города">Район города</th>
+                    <th data-toggle="tooltip" title="Адрес">Адрес</th>
                     <th>Улица</th>
-                    <th>Дом</th>
-                    <th data-toggle="tooltip" title="Корпус">К</th>
-                    <th data-toggle="tooltip" title="Квартира">Кв</th>
-                    <th data-toggle="tooltip" title="Тип прибора учета">Тип ПУ</th>
-                    <th data-toggle="tooltip" title="Заводской номер ПУ">№ ПУ</th>
-                    <th data-toggle="tooltip" title="Дата гос проверки">Дата проверки</th>
-                    <th>№ пломбы</th>
-                    <th data-toggle="tooltip" title="Год выпуска прибора учета">Год выпуска</th>
-                    <th>Зона суток</th>
+                    <th data-toggle="tooltip" title="Дом/корпус.1">Дом/корпус.1</th>
+                    <th>Квартира\Комната</th>
+                    <th>ЛС</th>
+                    <th data-toggle="tooltip" title="Заводской номер ИПУ">Заводской номер ИПУ</th>
+                    <th data-toggle="tooltip" title="Модель ИПУ">Модель ИПУ</th>
+                    <th data-toggle="tooltip" title="Тип ИПУ">Тип ИПУ</th>
+                    <th data-toggle="tooltip" title="Дата допуска ПУ в ком.учет">Дата допуска ПУ в ком.учет</th>
+                    <th data-toggle="tooltip" title="Дата окончания допуска ПУ в ком.учет">Дата окончания допуска ПУ в
+                        ком.учет</th>
+                    <th>Место установки ПУ</th>
+                    <th data-toggle="tooltip" title="Номер пластиковой пломбы">Номер пластиковой пломбы</th>
+                    <th>№ АМП. ООО "Исполнитель"</th>
+                    <th>Состояние ПУ</th>
+                    <th>Дебиторская задолженность</th>
+                    <th>Дата снятия текущего показания "Исполнитель"</th>
+                    <th>Количество проживающих (Чел.) ООО "Исполнитель"</th>
+                    <th>Заводской № ИПУ. ООО "Исполнитель"</th>
+                    <th>Марка, модель, серия ООО "Исполнитель"</th>
+                    <th>Год выпуска "Исполнитель"</th>
+                    <th>Тип ИПУ "Исполнитель"</th>
+                    <th>Контрольные Показания. "Исполнитель"</th>
+                    <th>№ Пломбы. "Исполнитель"</th>
+                    <th>№ АМП. ООО "Исполнитель"</th>
+                    <th>Наличие документации. ООО "Исполнитель"</th>
+                    <th>Дата последней поверки. ООО "Исполнитель"</th>
+                    <th>Дата окончания поверки. ООО "Исполнитель"</th>
+                    <th>Техническое состояние. "Исполнитель"</th>
+                    <th>Место установки "Исполнитель"</th>
+                    <th>№ Пломбы установленные "Исполнитель"</th>
+                    <th>№ АМП установленные "Исполнитель"</th>
+                    <th>Количество ИПУ в квартире "Исполнитель"</th>
+                    <th>Наличие подписи потребителя</th>
+                    <th>Замечание к прибору учета "Исполнитель"</th>
+                    <th>Комментарий к акту "Исполнитель"</th>
+                    <th>Подробное вносимое пояснение</th>
+                    <th>ФИО агента "Исполнитель"</th>
+                    <th>Примечание</th>
+                    <th>Дельта</th>
+                    <th>Брак</th>
+                    <th>Примечание для ТСБ</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,7 +77,7 @@
 
                         <td>
                             <a type="button" data-toggle="modal" data-target="#modal-{{ $consumer->id }}"
-                                href="{{ $consumer->getImage() }}"><img class="img-thumbnail img-fluid"
+                                href="{{ $consumer->getImage() }}"><img width="40" class="img-thumbnail"
                                     src="{{ $consumer->getImage() }}" class="btn"></a>
 
                             <div id="modal-{{ $consumer->id }}" class="modal fade bd-example-modal-xl" tabindex="-1"
@@ -61,23 +89,51 @@
                                 </div>
                             </div>
                         </td>
-                        <td data-toggle="tooltip" title="{{ $consumer->note }}">{!! Str::limit(strip_tags($consumer->note), 10) !!}
-                        </td>
-                        <td>{{ $consumer->reading }}</td>
-                        <td>{{ $consumer->crawl_date }}</td>
-                        <td>{{ $consumer->personal_account }}</td>
-                        <td>{{ $consumer->full_name }}</td>
-                        <td>{{ $consumer->district }}</td>
-                        <td>{{ $consumer->street }}</td>
-                        <td>{{ $consumer->house }}</td>
-                        <td>{{ $consumer->building }}</td>
-                        <td>{{ $consumer->apartment }}</td>
-                        <td>{{ $consumer->model }}</td>
-                        <td>{{ $consumer->number }}</td>
-                        <td>{{ $consumer->verif_date }}</td>
-                        <td>{{ $consumer->seal }}</td>
-                        <td>{{ $consumer->year_release }}</td>
-                        <td>{{ $consumer->day_zone }}</td>
+
+
+                        <td>{{ $consumer->link_pu }}</td>
+                        <td>{{ $consumer->rayon_goroda }}</td>
+                        <td>{{ $consumer->adres }}</td>
+                        <td>{{ $consumer->ulica }}</td>
+                        <td>{{ $consumer->dom_korpus1 }}</td>
+                        <td>{{ $consumer->kvartira_komnata }}</td>
+                        <td>{{ $consumer->ls }}</td>
+                        <td>{{ $consumer->zavodskoy_nomer_ipu }}</td>
+                        <td>{{ $consumer->model_ipu }}</td>
+                        <td>{{ $consumer->tip_ipu }}</td>
+                        <td>{{ $consumer->data_dopuska_pu_v_komuchet }}</td>
+                        <td>{{ $consumer->data_okonchaniya_dopuska_pu_v_komuchet }}</td>
+                        <td>{{ $consumer->mesto_ustanovki_pu }}</td>
+                        <td>{{ $consumer->nomer_plastikovoy_plomby }}</td>
+                        <td>{{ $consumer->nomer_antimagnitnoy_plomby }}</td>
+                        <td>{{ $consumer->sostoyanie_pu }}</td>
+                        <td>{{ $consumer->debitorskaya_zadoljennost }}</td>
+                        <td>{{ $consumer->data_snyatiya_tekuschego_pokazaniya_ispolnitel }}</td>
+                        <td>{{ $consumer->kolichestvo_projivauschih_chel_ispolnitel }}</td>
+                        <td>{{ $consumer->zavodskoy_nomer_ipu_ispolnitel }}</td>
+                        <td>{{ $consumer->marka_model_seriya_ispolnitel }}</td>
+                        <td>{{ $consumer->god_vypuska_ispolnitel }}</td>
+                        <td>{{ $consumer->tip_ipu_ispolnitel }}</td>
+                        <td>{{ $consumer->kontrolnye_pokazaniya_ispolnitel }}</td>
+                        <td>{{ $consumer->nomer_plomby_ispolnitel }}</td>
+                        <td>{{ $consumer->nomer_amp_ispolnitel }}</td>
+                        <td>{{ $consumer->nalichie_dokumentacii_ispolnitel }}</td>
+                        <td>{{ $consumer->data_posledney_poverki_ispolnitel }}</td>
+                        <td>{{ $consumer->data_okonchaniya_poverki_ispolnitel }}</td>
+                        <td>{{ $consumer->tehnicheskoe_sostoyanie_ispolnitel }}</td>
+                        <td>{{ $consumer->mesto_ustanovki_ispolnitel }}</td>
+                        <td>{{ $consumer->nomer_plomby_ustanovlennye_ispolnitel }}</td>
+                        <td>{{ $consumer->nomer_amp_ustanovlennye_ispolnitel }}</td>
+                        <td>{{ $consumer->kolichestvo_ipu_v_kvartire_ispolnitel }}</td>
+                        <td>{{ $consumer->nalichie_podpisi_potrebitelya }}</td>
+                        <td>{{ $consumer->zamechanie_k_priboru_ucheta_ispolnitel }}</td>
+                        <td>{{ $consumer->kommentariy_k_aktu_ispolnitel }}</td>
+                        <td>{{ $consumer->podrobnoe_vnosimoe_poyasnenie }}</td>
+                        <td>{{ $consumer->fio_agenta_ispolnitel }}</td>
+                        <td>{{ $consumer->primechanie }}</td>
+                        <td>{{ $consumer->delta }}</td>
+                        <td>{{ $consumer->brak }}</td>
+                        <td>{{ $consumer->primechanie_dlya_tsb }}</td>
                     </tr>
                 @endforeach
             </tbody>
